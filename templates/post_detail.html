@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <head>
+        <style>
+            body {
+                padding-top: 0px;
+                background: linear-gradient(to right, #dda94e, #c67878);
+            }
+
+            .container {
+                border-radius: 10px;
+            }
+
+            .navbar {
+                border-bottom: 1px solid #a7bacd;
+            }
+
+            .navbar-brand {
+                font-weight: bold;
+            }
+
+            .navbar-nav .nav-link {
+                margin-right: 10px;
+            }
+
+            .footer {
+                padding: 20px 0;
+            }
+
+            .home-background {
+                background: linear-gradient(to right, #8e9969, #87CEEB);
+                padding: 20px;
+                border-radius: 15px;
+                box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            }
+
+            .input-group {
+                display: flex;
+            }
+
+            .form-control {
+                border-radius: 12px;
+                width: 120px;
+            }
+
+            .btn-outline-light {
+                border-radius: 0;
+            }
+
+            .card-img-top {
+                max-width: 100%;
+                height: 10  0%;
+            }
+
+            .im {
+                margin-right: 100%;
+            }
+
+            .ali {
+                margin: 20px;  /* Adjusted margin */
+                padding: 20px;
+                border: 1px solid #ccc;
+                border-radius: 16px;
+                background: linear-gradient(to right, #dda94e, #c67878);
+            }
+        </style>
+    </head>
+        <div class="ali">
+            {% csrf_token %}
+            <div class="ali">
+                <h1 class="card-title">{{ posts.title }}</h1></div>
+                <div class="ali"><img class="card-img-top" src="{{ posts.image.url }}"></div>
+            <div class="ali">
+            <h1 class="text-secondary">{{ posts.info }}</h1>
+            <h1 class="text-secondary">{{ posts.time }}</h1>
+            </div>
+        </div>
+
+
+    <div class="ali">
+        <a href="{% url 'post_edit' pk=posts.pk %}" >Tahrirlash</a>
+        <a href="{% url 'post_delete' pk=posts.pk %}" >O'chirish</a>
+        <a href="{% url 'post_list' %}" >Barcha postlar</a>
+    </div>
+{% endblock content %}

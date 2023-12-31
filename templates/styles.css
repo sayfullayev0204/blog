@@ -1,0 +1,91 @@
+body {
+    padding-top: 0px;
+    background: linear-gradient(to right, #dda94e, #c67878); 
+  }
+  .container {
+    border-radius: 10px;
+  }
+  .navbar {
+    border-bottom: 1px solid #a7bacd;
+  }
+  .navbar-brand {
+    font-weight: bold;    
+  }
+  .navbar-nav .nav-link {
+    margin-right: 10px;
+  }
+  .footer {
+    padding: 20px 0;
+  }  
+  .home-background {
+    background: linear-gradient(to right, #8e9969, #87CEEB);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+.input-group {
+    display: flex;
+  }
+  .form-control {
+    border-radius: 12px;
+    width: 120px;
+  }  
+  .bo {
+    margin: 300px;
+    margin-top: 1   00px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    background: linear-gradient(to right, #dda94e, #c67878); 
+  }
+  .btn-outline-light {
+    border-radius: 0;
+  }
+  .card-img-top {    
+    max-width: 30%;
+    height: 40%;
+    padding: 30px;
+  }
+  .im {
+    text-align: center;
+    margin-right: 0%;
+    
+  }
+  .card {
+    max-width: 50%;
+  }
+.ali {
+    margin: 300px;
+    margin-top: 1   00px;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 16px;
+    background: linear-gradient(to right, #dda94e, #c67878); 
+  }
+  label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+  }
+  input[type="text"],
+  input[type="email"],
+  textarea {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ced4da;
+    border-radius: 12px;
+    box-sizing: border-box;
+  }
+  input[type="submit"] {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  input[type="submit"]:hover {
+    background-color: #0056b3;
+  }
+  

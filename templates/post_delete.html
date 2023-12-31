@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block content %}
+
+    <h1>Postni o'chirish</h1>
+
+        <form action=" " method="post">{% csrf_token %}
+
+            <h2 style="color: blue;">"{{ posts.title }}" nomli postni o'chirishni istaysizmi?</h2>
+            <button class="btn btn-danger ml-2" type="submit">Ha</button>
+            <a style="color:azure;"  class="btn btn-danger ml-2 " href="{% url 'post_detail' pk=posts.pk %}"><h1 class="btn btn-danger ml-2">Yo'q</h1></a>
+            
+        </form>
+
+{% endblock content %}

@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}Postlar{% endblock title %}</title>
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="path/to/bootstrap/css/bootstrap.min.css">
+
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding: 20px;
+        }
+
+        .card {
+            width: 50rem;
+            margin-bottom: 91px;
+            background-color: #ffffff;
+            border: 70px solid #dee2e6;
+            border-radius: 190px;
+            transition: transform 0.01s;
+        }
+
+        .card:hover {
+            transform: scale(1.05);
+        }
+
+        .card-header {
+            background-color: #007bff;
+            color: #ffffff;
+            border-radius: 160px 160px 0 0;
+            padding: 10px;
+        }
+
+        img.card-img-top {
+            max-height: 200px;
+            object-fit: cover;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .card-footer {
+            background-color: #6c757d;
+            color: #ffffff;
+            border-radius: 0 0 10px 10px;
+            padding: 10px;
+        }
+
+        .details {
+            display: none;
+            margin-top: 10px;
+            padding: 10px;
+            background-color: #28a745;
+            color: #ffffff;
+            border-radius: 0 0 10px 10px;
+        }
+    </style>
+</head>
+<body>
+
+    {% block content %}
+    {% for profile in object_list %}
+    <div class="card">
+        <div class="card-header">
+            <h5 class="">{{ profile.name }}</h5>
+        </div>
+        <img src="{{ profile.img.url }}" class="card-img-top" alt="{{ profile.name }}">
+        <div class="card-footer">
+            <button class="btn btn-light btn-sm" onclick="toggleDetails({{ profile.pk }})" style="text-align: center;">Meng ma'lumotlarim</button>
+        </div>
+        <div class="details" id="details{{ profile.pk }}">
+            <!-- Additional details go here -->
+            <p>Ism: {{profile.name}}</p>
+            <p>Familya: {{profile.lastname}}</p>
+            <p>Yosh: {{profile.age}}</p>
+            <p>Tug'ilgan yili: {{ profile.t_yil }}</p>
+            <div style="box">
+            <a href="{% url 'home' %}">Bosh sahifa</a>
+        </div>
+        </div>
+    </div>
+    {% endfor %}
+    {% endblock content %}
+
+    <!-- Bootstrap JS (optional) -->
+    <script src="path/to/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <script>
+        function toggleDetails(profileId) {
+            var detailsDiv = document.getElementById('details' + profileId);
+            if (detailsDiv.style.display === 'none') {
+                detailsDiv.style.display = 'block';
+            } else {
+                detailsDiv.style.display = 'none';
+            }
+        }
+    </script>
+</body>
+</html>

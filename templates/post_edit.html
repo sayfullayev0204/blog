@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tahrirlash</title>
+    <link rel="stylesheet" href="path/to/styles.css"> <!-- External stylesheet link -->
+    <!-- You can also include any additional meta tags, links, or scripts here -->
+</head>
+<body style="font-family: 'Arial', sans-serif; background-color: #f4f4f4;">
+
+    <div class="container" style="margin: 20px; max-width: 600px;"> <!-- Adjusted container styles -->
+        <h1 style="color: #333; font-size: 24px; font-weight: bold;">Tahrirlash</h1>
+
+        <form method="post" enctype="multipart/form-data" style="margin: 20px 0;">
+
+            {% csrf_token %}
+            
+            {{ form.as_p }}
+
+            <button class="btn btn-info btn-block mt-3" type="submit">Saqlash</button>
+        </form>
+    </div>
+
+    <!-- Any additional scripts or footer content can be placed here -->
+
+</body>
+</html>
